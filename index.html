@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hotel Sand City</title>
+        <title>Hotel Ocenia</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
@@ -12,20 +12,28 @@
     </head>
     <body>
         <div class="hero-img"></div>
-        <div class="container">
+        <div class="wrapper">
             <header>              
                 <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#rooms">Rooms</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contacts">Contacts</a></li>
-                    </ul>
+
+                    <svg class="close" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="black"/>
+                    </svg>
+
+                    <div class="nav_logo"><img src="./assets/logo.svg" alt="logo"></div>
+                    
+                    <ul class="nav_list">
+                        <li><a class="homebtn" href="#">Home</a></li>
+                        <li><a class="about" href="#about">About</a></li>
+                        <li><a class="rooms" href="#rooms">Rooms</a></li>
+                        <li><a class="services" href="#services">Services</a></li>
+                        <li><a class="contacts" href="#contacts">Contacts</a></li>
+                    </ul>                            
+
                 </nav>
 
-                <svg class="close" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z" fill="black"/>
+                <svg class="menu" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z" fill="white"/>
                 </svg>
 
                 <a href="#" class="logo">
@@ -43,60 +51,77 @@
             <section class="hero">
                 <h1>Hotel Sand City</h1>
 
-                <p class="subhead">Grandeur stay near the ocean</p>
+                <p>Grandeur stay near the ocean</p>
             </section>
 
             <section class="more-info">
-                <div class="about" id="about">
+                <div class="feature2" id="about">
                     <div class="content">
                         <p class="title">Welcome to Hotel Sand City</span></p>
-                        <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, maxime tempora? Obcaecati sequi fugiat accusamus repudiandae inventore placeat vero repellendus animi officiis, et, voluptatibus atque non, temporibus nesciunt eveniet maxime.</p>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, maxime tempora? Obcaecati sequi fugiat accusamus repudiandae inventore placeat vero repellendus animi officiis, et, voluptatibus atque non, temporibus nesciunt eveniet maxime.</p>
                     </div>
                 </div>
     
-                <div class="rooms" id="rooms">
+                <div class="feature" id="rooms">
                     <div class="content">
                         <p class="title">Splendor<span>Rooms</span></p>
-                        <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, maxime tempora? Obcaecati sequi fugiat accusamus repudiandae inventore placeat vero repellendus animi officiis, et, voluptatibus atque non, temporibus nesciunt eveniet maxime.</p>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, maxime tempora? Obcaecati sequi fugiat accusamus repudiandae inventore placeat vero repellendus animi officiis, et, voluptatibus atque non, temporibus nesciunt eveniet maxime.</p>
                     </div>
                     
-                    <ul>
-                        <li><img src="/assets/bed_1.jpg" alt="bed_1"></li>
-                        <li><img src="/assets/bed_2.jpg" alt="bed_2"></li>
-                        <li><img src="/assets/bed_3.jpg" alt="bed_3"></li>
-                        <li><img src="/assets/bed_4.jpg" alt="bed_4"></li>
-                    </ul>
+                    
+                        <img src="/assets/bed_1.jpg" alt="bed_1">
+                        <!-- <img src="/assets/bed_2.jpg" alt="bed_2">
+                        <img src="/assets/bed_3.jpg" alt="bed_3">
+                        <img src="/assets/bed_4.jpg" alt="bed_4"> -->
+                    
                 </div>
     
-                <div class="services" id="services">
+                <div class="feature left" id="services">
                     <div class="content">
                         <p class="title">Exceptional<span>Services</span></p>
-                        <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, maxime tempora? Obcaecati sequi fugiat accusamus repudiandae inventore placeat vero repellendus animi officiis, et, voluptatibus atque non, temporibus nesciunt eveniet maxime.</p>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, maxime tempora? Obcaecati sequi fugiat accusamus repudiandae inventore placeat vero repellendus animi officiis, et, voluptatibus atque non, temporibus nesciunt eveniet maxime.</p>
                     </div>
 
-                    <ul>
-                        <li><img src="/assets/restuarant.jpg" alt="restuarant"></li>
-                        <li><img src="/assets/conference_room.jpg" alt="conference_room"></li>
-                        <li><img src="/assets/kids_zone.jpg" alt="kids_zone"></li>
-                    </ul>
+                    
+                        <img src="/assets/restuarant.jpg" alt="restuarant">
+                        <!-- <img src="/assets/conference_room.jpg" alt="conference_room">
+                        <img src="/assets/kids_zone.jpg" alt="kids_zone"> -->
+                                       
                 </div>
     
-                <div class="contacts" id="contacts">
+                <div class="feature2" id="contacts">
                     <div class="content">
                         <p class="title">Contacts</p>
                         <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, maxime tempora? Obcaecati sequi fugiat accusamus repudiandae inventore placeat vero repellendus animi officiis, et, voluptatibus atque non, temporibus nesciunt eveniet maxime.</p>
                     </div>
                 </div>
-            </div>
             </section>
+        </div>
             
-    </body>
+            <footer>
+                <p class="subhead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, maxime tempora? Obcaecati sequi fugiat accusamus repudiandae inventore placeat vero repellendus animi officiis, et, voluptatibus atque non, temporibus nesciunt eveniet maxime.</p>
+                <p class="subhead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, maxime tempora? Obcaecati sequi fugiat accusamus repudiandae inventore placeat vero repellendus animi officiis, et, voluptatibus atque non, temporibus nesciunt eveniet maxime.</p>
+            </footer>
 
-    <footer>
-        <section class="services">
-            <h2>Services</h2>
-            
-            <p class="subhead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, maxime tempora? Obcaecati sequi fugiat accusamus repudiandae inventore placeat vero repellendus animi officiis, et, voluptatibus atque non, temporibus nesciunt eveniet maxime.</p>
-        </section>
-    </footer>
+            <script>
+                const menu = document.querySelector('.menu');
+                const close = document.querySelector('.close');
+                const nav = document.querySelector('nav');
+                const nav_list = document.querySelector('.nav_list');
+
+                menu.addEventListener('click', () => {
+                    nav.classList.add('open-nav')
+                })
+
+                close.addEventListener('click', () => {
+                    nav.classList.remove('open-nav')
+                })
+
+                nav_list.addEventListener('click', () => {
+                    nav.classList.remove('open-nav')
+                })
+
+                
+            </script>
+    </body>
 </html>

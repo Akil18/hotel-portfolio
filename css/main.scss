@@ -13,65 +13,234 @@ a {
     top: 0;
     left: 0;
     background: url('../assets/background.jpg');
+    // background-color: black;
+    opacity: 80%;
     background-size: cover;
     background-position-x: 20%;
     background-position-y: 20%;
     width: 100%;
     height: 100vh;
     z-index: -1;
+    animation: introload 2s forwards;
     //overflow: hidden;
 }
 
-.logo {
-    color: white;
-    margin-top: -.8em;
-}
-
-.book-now-line {
-    margin: 0px 5px 0px 5px;
-}
-
-.book-now {
-    display: flex;
-    justify-content: space-between;
-    height: 5vh;
-    
-    div {
-        margin: 10px 0px 5px 0px;
-    }
-}
-
 nav {
-    display: none;
+    //display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: white;
+    height: 100vh;
+    width: 50%;
+    z-index: 999;
+    text-transform: uppercase;
+    transform: translateX(-100%);
+    transition: transform .5s ease-in-out;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 1em;
+
+        a {
+            color: black;
+            padding: .75em 2em;
+            display: block;
+
+            &:hover {
+                background: rgb(235, 235, 235);
+            }
+        }
+    }
+
+    .nav_logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 6em;
+    }
+
+    .close {
+        float: right;
+        margin: 2em;
+        width: 1.5em;
+    }
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    color: white;
+    background-color: black;
+    opacity: 70%;
+    z-index: 3;
+    
+    .logo {
+        //margin: 1em 2em;
+        position: relative;
+        left: 5em;    
+    }
 
     svg {
-        width: 2em;
-        margin-top: -2em;
+        width: 1.5em;
+        margin: 1em 2em;
         cursor: pointer;
     }
+
+    .book-now-line {
+        margin: 0px 5px 0px 5px;
+    }
     
-}
-
-h1 {
-    font-size: 6rem;
-    margin: 1em 1em 1em 1em;
-    line-height: 5rem;
-}
-
-.subhead {
-    font-size: 1.4rem;
+    .book-now {
+        display: flex;
+        justify-content: space-between;
+        height: 5vh;
+        //color: white;
+        font-size: 1.2rem;
+        margin: 1em 2em;
+    
+        div {
+            margin: 10px 0px 5px 0px;
+            background-color: rgba(0, 0, 0, 0.18);
+        }
+    }
 }
 
 section.hero {
     color: white;
-    height: 90vh;
+    height: 80vh;
+    animation: moveLeft 1s ease-in-out forwards;
+    opacity: 0;
+    
+    h1 {
+        font-size: 6rem;
+        margin-top: 2em; 
+        line-height: 5rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+}
+
+.more-info {
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 11em;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    .desc {
+        line-height: 1.5rem;
+    }
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background: black;
+    color: white;
+    width: 100%;
+    z-index: -1;
+    column-count: 2;
+    column-gap: 5em;
+
+    p.subhead {
+        font-size: 1.0rem;
+        margin: 3em 3em;
+        
+    }
+}
+
+.open-nav {
+    transform: translateX(0%);
+}
+
+@media only screen and (min-width: 680px) {
+
+    body {
+        margin: 1.5em 5em;
+        font-family: 'Poppins', sans-serif;
+    } 
+}
+
+@media only screen and (min-width: 920px) {
+
+    .feature {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 3em;
+        margin-bottom: 3em;
+
+        img {
+            width: 25em;
+        }
+
+        .content {
+            text-align: right;
+            width: 25em;
+        }
+    }
+
+    .feature.left {
+        grid-template-areas: 
+            "left right";
+
+        img {
+            grid-area: left;
+        }
+
+        .content {
+            text-align: left;
+            width: 25em;
+            justify-self: left;
+        }
+    }
+
+    .feature2 {
+        text-align: center;
+        margin-bottom: 3em;
+    }
 
 }
-footer {
-    background: black;
+
+@media only screen and (min-width: 1200px) {
+    .wrapper {
+        width: 1200 px;
+        justify-self: left;
+    }
+
+    .feature {
+        gap: 0;
+    }
+}
+
+@keyframes introload {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 50%;
+    }    
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(200px);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }    
 }
